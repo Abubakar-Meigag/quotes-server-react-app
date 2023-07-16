@@ -12,7 +12,7 @@ const RandomQuotes = ({ data }) => {
 return (
     <div className="random-div">
         {(
-            <div>
+            <div className="result-random">
                 <h2>{randomQuote.quote}</h2>
                 <p>author: {randomQuote.author}</p>
             </div>
