@@ -2,7 +2,7 @@
 
 I use my glitch serever to fetch qoutes data on this url "https://abubakar-meigag-quote-server.glitch.me/quotes"
 
-Todo this exercise 
+Todo this challenge 
 
 # Challenge: Advanced: Add a React app as a front-end
 
