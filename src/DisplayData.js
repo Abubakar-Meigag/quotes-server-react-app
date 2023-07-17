@@ -20,37 +20,30 @@ const DisplayData = ( { data } ) => {
     return (
         <div>
             <h3>
-            {search.map((quote, index) => {
-                return (
-                <div className="search-block">
-                    <h3 key={index}> {quote.quote}</h3>
-                    <p key={index}> author: {quote.author}</p>
-                </div>
-                );
-            })}
+                {search.map((quote, index) => {
+                    return (
+                        <div className="search-block">
+                            <h3 key={index}> {quote.quote}</h3>
+                            <p key={index}> author: {quote.author}</p>
+                        </div>
+                    );
+                })}
             </h3>
             <div className="input-search">
-            <input
-                type="text"
-                onChange={handelChange}
-                placeholder="Search for Quotes...."
-            />
-            <button onClick={searchForQuotes} className="btn">
-                Search
-            </button>
+                <input
+                    type="text"
+                    onChange={handelChange}
+                    placeholder="Search for Quotes...."
+                />
+                <button onClick={searchForQuotes} className="btn">
+                    Search
+                </button>
             </div>
             <div className='btn-div'>
-            <RandomQuotes data={data} />
+                <RandomQuotes data={data} />
             </div>
         </div>
     );
 }
 
 export default DisplayData;
-
-
-            // {
-            //   data.map((quote, index) => {
-            //     return <p key={index}>{quote.quote}</p>;
-            //   });
-            // }

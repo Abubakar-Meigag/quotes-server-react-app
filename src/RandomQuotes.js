@@ -18,9 +18,9 @@ return (
             </div>
         )}
         <div>
-        <button onClick={pickRandomQuote} className="btn">
-        Get Random Quote
-        </button>
+            <button onClick={pickRandomQuote} className="btn">
+            Get Random Quote
+            </button>
         </div>
     </div>
 );
