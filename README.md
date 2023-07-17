@@ -1,70 +1,35 @@
-# Getting Started with Create React App
+# Quotes server on React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+I use my glitch serever to fetch qoutes data on this url "https://abubakar-meigag-quote-server.glitch.me/quotes"
 
-## Available Scripts
+Todo this exercise 
 
-In the project directory, you can run:
+# Challenge: Advanced: Add a React app as a front-end
 
-### `npm start`
+Note: only do this if you have done all other Node homework this week - that is the priority.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    Make a very simple React app called quotes-react-app
+    Have it fetch a random quote from your server on glitch. You'll have to enable CORS on the express app. See below.
+    (Bonus: Allow the user to get a new random quote from the server, by clicking a button or clicking the quote.)
+    Host your react app on netlify
+    Post the URL to your hosted React app on Slack, and in your google classroom submission (along with your glitch server url)
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Enabling CORS on the Express app
 
-### `npm test`
+You'll have to install and enable CORS in order to allow your JSON to be loaded from a different server (glitch.me) than your React app was initially loaded (probably netlify.com).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+in package.json add a dependency for "cors": "^2.8.5"
 
-### `npm run build`
+Then in your server.js add...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+var cors = require('cors')
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+and
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+app.use(cors())
 
-### `npm run eject`
+Read more or CORS 
+https://codeyourfuture.github.io/syllabus-master/others/cors.html
+and in CORS in Express.
+https://expressjs.com/en/resources/middleware/cors.html
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
