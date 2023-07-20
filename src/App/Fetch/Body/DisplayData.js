@@ -8,7 +8,7 @@ const DisplayData = () => {
 
   const url = "https://abubakar-meigag-quote-server.glitch.me/quotes/search?term=" + text; // I could use back tic here with ${}
 
-  const searchInput = async () => {
+  const handelSearch = async () => {
     try {
       const res = await axios.get(url);
       setSearch(res.data);
@@ -39,7 +39,7 @@ const DisplayData = () => {
           onChange={handelChange}
           placeholder="Search for Quotes...."
         />
-        <button onClick={searchInput} className="btn">
+        <button onClick={handelSearch} className="btn">
           Search
         </button>
       </div>
