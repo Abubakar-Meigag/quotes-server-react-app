@@ -1,13 +1,18 @@
 import React, { useState } from "react";
+import axios from "axios";
 
-const RandomQuotes = ({ data }) => {
+const RandomQuotes = () => {
     const [randomQuote, setRandomQuote] = useState("");
+    const url = "https://abubakar-meigag-quote-server.glitch.me/quotes/random";
 
-    const pickRandomQuote = () => {
-    const randomIndex = Math.floor(Math.random() * data.length);
-    const randomQuoteData = data[randomIndex];
-    setRandomQuote(randomQuoteData);
-    };
+    const pickRandomQuote = async () => {
+        try {
+        const res = await axios.get(url);
+        setRandomQuote(res.data)
+        } catch (error) {
+            console.log(error);
+        }
+    }
 
 return (
     <div className="random-div">

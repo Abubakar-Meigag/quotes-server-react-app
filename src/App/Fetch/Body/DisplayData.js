@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import RandomQuotes from "./RandomQuotes/RandomQuotes";
 import axios from "axios";
 
-const DisplayData = ({ data }) => {
+const DisplayData = () => {
   const [text, setText] = useState("");
   const [search, setSearch] = useState([]);
 
@@ -44,7 +44,7 @@ const DisplayData = ({ data }) => {
         </button>
       </div>
       <div className="btn-div">
-        <RandomQuotes data={data} />
+        <RandomQuotes />
       </div>
     </div>
   );
