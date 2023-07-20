@@ -1,16 +1,20 @@
 import React, { useState } from "react";
 import RandomQuotes from "./RandomQuotes/RandomQuotes";
+import axios from "axios";
 
 const DisplayData = ({ data }) => {
   const [text, setText] = useState("");
   const [search, setSearch] = useState([]);
 
-  const searchForQuotes = () => {
-    const searchInput = text.toLowerCase();
-    const searchResult = data.filter((quote) => {
-      return quote.quote.toLowerCase().includes(searchInput);
-    });
-    setSearch(searchResult);
+  const url = "https://abubakar-meigag-quote-server.glitch.me/quotes/search?term=" + text; // I could use back tic here with ${}
+
+  const searchInput = async () => {
+    try {
+      const res = await axios.get(url);
+      setSearch(res.data);
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   const handelChange = (event) => {
@@ -35,7 +39,7 @@ const DisplayData = ({ data }) => {
           onChange={handelChange}
           placeholder="Search for Quotes...."
         />
-        <button onClick={searchForQuotes} className="btn">
+        <button onClick={searchInput} className="btn">
           Search
         </button>
       </div>
