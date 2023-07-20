@@ -1,6 +1,6 @@
 # Quotes server on React App
 
-I use my glitch serever to fetch qoutes data on this url "https://abubakar-meigag-quote-server.glitch.me/quotes"
+I use my glitch server to fetch quotes data on this url "https://abubakar-meigag-quote-server.glitch.me/quotes"
 
 Todo this challenge 
 
